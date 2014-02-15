@@ -32,9 +32,7 @@ sub add {
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
 
-  # this code haven't been checked
-  # Smalls::Gens::add($file, $list);
-  # @listItems = @{$list};
+  show(@{$list});
 }
 
 # why?
