@@ -25,7 +25,7 @@ sub add {
   }
 
   # is this right?
-  $group = '' unless defined $group;
+  $group = 'misc' unless defined $group;
   
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
