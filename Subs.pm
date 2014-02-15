@@ -17,21 +17,18 @@ sub show {
 }
 
 sub add {
-  my (@list, $domain, $ip, $group) = @_;
+  my ($list, $ip, $domain, $group) = @_;
   
+  # kosher?
+  foreach my $item (keys $list, $ip, $domain) {
+    defined $item or die "Must provide actions\n";
+  }
+
   # is this right?
   $group = '' unless defined $group;
-
-  push(@list, [{
-    'ip' => $ip,
-    'list' => $domain 
-  }]);
-
-  show(@list);
-
-  say $domain;
-  say $ip;
-  say $group;
+  
+  # is this?
+  push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
 }
 
 # why?

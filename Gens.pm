@@ -6,8 +6,20 @@ use Data::Dumper;
 
 package Smalls::Gens;
 
+my $hosts_file = '';
+
+# sub add {
+#   sudo open my $file, '>', $hosts_file
+#     or die "Can't open $hosts_file: $!\n";
+
+#   chomp( my @lines = <$file> );
+
+#   close $file
+#     or die "Can't close $hosts_file: $!\n";
+# }
+
 sub list {
-  my ($hosts_file) = @_;
+  ($hosts_file) = @_;
 
   open my $file, '<', $hosts_file
     or die "Can't open $hosts_file: $!\n";
