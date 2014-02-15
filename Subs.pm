@@ -6,9 +6,11 @@ use Data::Dumper;
 
 package Smalls::Subs;
 
+my @listItems = ();
+
 sub show {
-  my @items = @_;
-  foreach my $item (@items) {
+  @listItems = @_;
+  foreach my $item (@listItems) {
     my $ip = $item->{'ip'};
     my $domains = join ' ', @{ $item->{'list'} };
 
@@ -17,7 +19,7 @@ sub show {
 }
 
 sub add {
-  my ($list, $ip, $domain, $group) = @_;
+  my ($file, $list, $ip, $domain, $group) = @_;
   
   # kosher?
   foreach my $item (keys $list, $ip, $domain) {
@@ -29,6 +31,10 @@ sub add {
   
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
+
+  # this code haven't been checked
+  # Smalls::Gens::add($file, $list);
+  # @listItems = @{$list};
 }
 
 # why?
