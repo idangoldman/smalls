@@ -29,7 +29,7 @@ sub add {
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
 
-  show(@{$list});
+  $list
 }
 
 1;

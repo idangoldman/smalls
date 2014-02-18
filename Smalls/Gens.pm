@@ -5,16 +5,17 @@ use warnings;
 
 use Data::Dumper;
 
+
 sub add {
+  say 'still experimental' and die;
+  
   my ($hosts_file, $data) = @_;
 
-  sudo open my $file, '>', $hosts_file
+  open FILE, '>', $hosts_file
     or die "Can't open $hosts_file: $!\n";
-
-  print <$file>, $data
-    or die "Can't write to $file: $!\n";
-
-  close $file
+  print FILE @{$data}
+    or die "Can't write to FILE: $!\n";
+  close FILE
     or die "Can't close $hosts_file: $!\n";
 }
 
