@@ -1,10 +1,9 @@
-#!/usesr/bin/perl
-use strict;
-use 5.14.0;
-use warnings;
-use Data::Dumper;
-
 package Smalls::Subs;
+use strict;
+use warnings;
+use 5.14.0;
+
+use Data::Dumper;
 
 my @listItems = ();
 
