@@ -4,8 +4,8 @@ use warnings;
 use v5.14;
 use Data::Dumper;
 
-use Gens;
-use Subs;
+use Smalls::Gens;
+use Smalls::Subs;
 
 my $hosts_file = '/etc/hosts';
 
