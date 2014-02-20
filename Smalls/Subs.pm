@@ -34,5 +34,4 @@ sub add {
   show(@{$list});
 }
 
-# why?
 1;
