@@ -5,7 +5,7 @@ use v5.14;
 use Data::Dumper;
 
 use Smalls::Gens;
-use Smalls::Subs;
+use Smalls::Subs qw<show add>;
 
 my $hosts_file = '/etc/hosts';
 
@@ -16,9 +16,9 @@ sub main {
   defined $cmd or die "Must provide command\n";
 
   if ($cmd eq 'show') {
-    Smalls::Subs::show(@list);
+    show(@list);
   } elsif ($cmd eq 'add') {
-    Smalls::Subs::add(\$file, \@list, @details);
+    add(\$file, \@list, @details);
   } else {
     say 'command?';
   }

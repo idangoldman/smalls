@@ -3,6 +3,9 @@ use strict;
 use warnings;
 use 5.14.0;
 
+use parent 'Exporter';
+our @EXPORT_OK = qw<show add>;
+
 use Data::Dumper;
 
 my @listItems = ();
