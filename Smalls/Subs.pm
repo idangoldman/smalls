@@ -26,8 +26,7 @@ sub add {
     defined $item or die "Must provide actions\n";
   }
 
-  # is this right?
-  $group = 'misc' unless defined $group;
+  $group //= 'misc';
   
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
