@@ -18,7 +18,7 @@ sub main {
   if ($cmd eq 'show') {
     show(@list);
   } elsif ($cmd eq 'add') {
-    add($file, \@list, @details);
+    add(\@list, @details);
   } else {
     say 'command?';
   }

@@ -19,7 +19,7 @@ sub show {
 }
 
 sub add {
-  my ($file, $list, $ip, $domain, $group) = @_;
+  my ($list, $ip, $domain, $group) = @_;
 
   # kosher?
   foreach my $item (keys $list, $ip, $domain) {
