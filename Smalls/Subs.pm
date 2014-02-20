@@ -20,7 +20,7 @@ sub show {
 
 sub add {
   my ($file, $list, $ip, $domain, $group) = @_;
-  
+
   # kosher?
   foreach my $item (keys $list, $ip, $domain) {
     defined $item or die "Must provide actions\n";
