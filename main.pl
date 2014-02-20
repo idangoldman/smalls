@@ -1,7 +1,7 @@
 #!/usesr/bin/perl
 use strict;
-use 5.14.0;
 use warnings;
+use v5.14;
 use Data::Dumper;
 
 # i guess it is not the legit way to do it.
