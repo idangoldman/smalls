@@ -8,10 +8,8 @@ our @EXPORT_OK = qw<show add>;
 
 use Data::Dumper;
 
-my @listItems = ();
-
 sub show {
-  @listItems = @_;
+  my @listItems = @_;
   foreach my $item (@listItems) {
     my $ip = $item->{'ip'};
     my $domains = join ' ', @{ $item->{'list'} };
