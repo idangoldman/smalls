@@ -4,8 +4,6 @@ use warnings;
 use v5.14;
 use Data::Dumper;
 
-# i guess it is not the legit way to do it.
-use lib '.';
 use Gens;
 use Subs;
 
