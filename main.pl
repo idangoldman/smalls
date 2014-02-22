@@ -19,7 +19,7 @@ sub main {
   if ($cmd eq 'show') {
     Smalls::Subs::show(@list);
   } elsif ($cmd eq 'add') {
-    Smalls::Subs::add(\$file, \@list, @details);
+    Smalls::Subs::add($file, \@list, @details);
   } else {
     say 'command?';
   }
