@@ -1,10 +1,9 @@
-#!/usesr/bin/perl
-use strict;
-use 5.14.0;
-use warnings;
-use Data::Dumper;
-
 package Smalls::Gens;
+use v5.14;
+use strict;
+use warnings;
+
+use Data::Dumper;
 
 sub list {
   my ($hosts_file) = @_;

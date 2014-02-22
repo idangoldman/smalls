@@ -1,15 +1,13 @@
-#!/usesr/bin/perl
+package Smalls::Subs;
+use v5.14;
 use strict;
-use 5.14.0;
 use warnings;
+
 use Data::Dumper;
 
-package Smalls::Subs;
-
-my @listItems = ();
-
 sub show {
-  @listItems = @_;
+  my @listItems = @_;
+
   foreach my $item (@listItems) {
     my $ip = $item->{'ip'};
     my $domains = join ' ', @{ $item->{'list'} };
@@ -20,20 +18,18 @@ sub show {
 
 sub add {
   my ($file, $list, $ip, $domain, $group) = @_;
-  
+
   # kosher?
   foreach my $item (keys $list, $ip, $domain) {
     defined $item or die "Must provide actions\n";
   }
 
-  # is this right?
-  $group = 'misc' unless defined $group;
-  
+  $group //= 'misc';
+
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
 
   show(@{$list});
 }
 
-# why?
 1;
