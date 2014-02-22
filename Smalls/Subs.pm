@@ -29,6 +29,7 @@ sub add {
   # is this?
   push(@{$list}, {'ip' => $ip, 'list' => [$domain]});
 
+  # what is the policy about 'return' in perl?
   $list
 }
 
